@@ -1,0 +1,9 @@
+use('ecommerce')
+
+
+db.users.insertOne({
+  name: 'John',
+  last_name: 'Doe',
+  email: 'andres@yopmail.com',
+  password: '1233456'
+})
