@@ -1,0 +1,27 @@
+use('ecommerce');
+
+db.createCollection('products', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['name', 'price'],
+      properties: {
+        name: {
+          bsonType: 'string'
+        },
+        sizes: {
+          bsonType: 'array',
+          minItems: 1,
+          uniqueItems: true,
+          items: {
+            bsonType: 'string'
+          }
+        },
+        price: {
+          bsonType: 'number',
+          minimum: 1,
+        }
+      }
+    }
+  }
+})

@@ -1,0 +1,7 @@
+use('ecommerce')
+
+db.products.insertOne({
+  name: 'Camiseta',
+  sizes: ['L', 'M', 'S'],
+  price: 8
+});
