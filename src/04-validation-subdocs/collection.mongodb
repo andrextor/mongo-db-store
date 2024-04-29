@@ -20,6 +20,18 @@ db.createCollection('products', {
         price: {
           bsonType: 'number',
           minimum: 1,
+        },
+        category: {
+          bsonType: 'object',
+          required: ['name', 'image'],
+          properties: {
+            name: {
+              bsonType: 'string'
+            },
+            image: {
+              bsonType: 'string'
+            }
+          }
         }
       }
     }
