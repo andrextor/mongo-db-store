@@ -1,0 +1,20 @@
+use('ecommerce')
+
+
+db.users.insertOne({
+  name: 'ANdres',
+  last_name: 'Doe',
+  email: 'andres@yopmail.com',
+  password: 'Ahola12345',
+  role: 'admin',
+  address: {
+    street: 'ab 123 dsa',
+    city: 'BOgota',
+    zipcode: '7600001'
+  },
+  shipping_address: {
+    street: 'ab 14432 dsa',
+    city: 'yumbo',
+    zipcode: '7600001'
+  }
+})

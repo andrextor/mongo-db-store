@@ -1,0 +1,6 @@
+use('ecommerce')
+
+
+db.users.find({
+  "address.city": { $regex: /bogota$/i }
+});
