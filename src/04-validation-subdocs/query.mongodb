@@ -1,0 +1,8 @@
+use('ecommerce')
+
+
+db.products.find();
+
+/* db.products.deleteMany(
+  { "_id": ObjectId("662eea47f566c066d1ba3ac3") },
+); */

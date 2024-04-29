@@ -1,0 +1,11 @@
+use('ecommerce')
+
+db.users.insertOne({
+  name: 'Johna',
+  last_name: 'Doe',
+  email: 'johana@yopmail.com',
+  password: '1233456',
+  role: 'seller',
+  age: 19,
+  isSingle: true
+});
