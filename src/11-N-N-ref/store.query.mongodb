@@ -1,0 +1,13 @@
+use('ecommerce')
+
+
+db.stores.aggregate([
+  {
+    $lookup: {
+      from: 'products',
+      localField: 'products_ids', // automaticamente detecta que es una lista
+      foreignField: '_id',
+      as: 'products'
+    }
+  }
+])
