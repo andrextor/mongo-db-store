@@ -1,0 +1,13 @@
+use('ecommerce')
+// para un usuario, mostrarme sus ordenes
+// Lookup del agregation framework
+db.users.aggregate([
+  {
+      $lookup: { // join
+        from: `orders`,
+        localField: `_id`,
+        foreignField: 'user_id',
+        as: 'orders'
+      }
+  }
+])
