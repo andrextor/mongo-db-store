@@ -1,0 +1,7 @@
+use('ecommerce')
+
+//db.products.find();
+db.stores.find();
+
+//producId = 663464408c3c76cdec0d1593;
+//storeId = 663460918b145c4f9c717868;

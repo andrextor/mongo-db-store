@@ -1,0 +1,17 @@
+use('ecommerce')
+
+db.products.aggregate([
+  {
+    $match: {
+      _id: ObjectId('663464408c3c76cdec0d1593')
+    }
+  },
+  {
+    $lookup: {
+      from: 'stores',
+      localField: 'stores_ids', // automaticamente detecta que es una lista
+      foreignField: '_id',
+      as: 'stores'
+    }
+  }
+])
