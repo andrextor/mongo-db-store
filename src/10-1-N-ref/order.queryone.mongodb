@@ -1,0 +1,10 @@
+use('ecommerce')
+
+// Crear un usuario  "$oid": "662f0d7e85ae326c9a51da00"
+/* db.users.insertOne({
+  name: 'pedro',
+  address: 'San carlos 123'
+}) */
+
+
+db.orders.find();

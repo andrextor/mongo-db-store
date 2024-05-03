@@ -1,0 +1,19 @@
+use('ecommerce')
+
+db.orders.insertMany([
+  {
+    user_id: ObjectId('662f0da63fc44fdee4ae9360'),
+    total: 1300,
+    date: '2023-23-25'
+  },
+  {
+    user_id: ObjectId('662f0d7e85ae326c9a51da00'),
+    total: 2400,
+    date: '2023-12-02'
+  },
+  {
+    user_id: ObjectId('662f0d7e85ae326c9a51da00'),
+    total: 2400,
+    date: '2023-12-02'
+  },
+])

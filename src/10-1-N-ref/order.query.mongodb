@@ -1,0 +1,18 @@
+use('ecommerce')
+
+// Consultar por una sola orden de compra
+db.orders.aggregate([
+  {
+    $match: { // filtrar
+      _id: ObjectId('66346242925fecd9a499c244') // order id
+    }
+  },
+  {
+    $lookup: { //Join
+      from: `users`,
+      localField: `user_id`,
+      foreignField: '_id',
+      as: 'user'
+    }
+  }
+])
