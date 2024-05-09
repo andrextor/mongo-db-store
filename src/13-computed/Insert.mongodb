@@ -1,0 +1,8 @@
+use('ecommerce')
+
+db.orders.insertOne({
+  user_id: ObjectId('662f0d7e85ae326c9a51da00'), // referencia a un ObjectID de un usuario
+  date: "2020-12-12",
+  total: 0,
+  items: []
+})
